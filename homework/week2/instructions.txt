@@ -1,0 +1,4 @@
+cd to this folder (week2)
+docker login
+docker build -t csv-to-scatter-plot . 
+docker run -v $(PWD)/data/:/data csv-to-scatter-plot

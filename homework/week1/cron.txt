@@ -1,0 +1,7 @@
+We have to use the following command:
+
+# open cron job editor (first time you need to select an editor)
+crontab -e
+
+# write the following line in the editor, save and close
+0 17 */2 * * path-to-script/runner.sh 'hello'
