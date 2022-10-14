@@ -53,3 +53,6 @@ docs/site/
 .cache/*
 tests/__pycache__/*
 *.pytest_cache/
+
+# custom
+homework/week3/data/
