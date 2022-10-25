@@ -56,3 +56,5 @@ tests/__pycache__/*
 
 # custom
 homework/week3/data/
+homework/week5/data.hdf
+homework/week3/data.parquet
