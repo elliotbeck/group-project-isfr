@@ -11,7 +11,8 @@ ROOT_URL = "https://api.binance.com/api/v3"
 endpoint = "klines"
 
 # construct request URL
-req = "{root_url}/{endpoint}?symbol={symbol}&interval={interval}&startTime={startTime}&limit={limit}" \
+req = "{root_url}/{endpoint}?symbol={symbol}&interval={interval}"\
+    "&startTime={startTime}&limit={limit}" \
      .format(root_url=ROOT_URL,
              endpoint="klines",
              symbol="BTCUSDT",
@@ -35,7 +36,9 @@ def binance_data(symbol, startTime):
     unix_timestamp = str(round(datetime.datetime.timestamp(formated_date)))
 
     # construct request URL
-    req = "https://api.binance.com/api/v3/klines?" + "symbol=" + symbol + "&interval=1h&startTime=" + unix_timestamp + "&limit=75"
+    req = ("https://api.binance.com/api/v3/klines?" + "symbol=" + 
+           symbol + "&interval=1h&startTime=" + 
+           unix_timestamp + "&limit=75")
     
     # get the data
     resp = requests.get(req)
