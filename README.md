@@ -17,6 +17,14 @@ Project Organization
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     │
+    ├── homework
+    │   ├── week1          <- Solutions for the first week
+    │   ├── week2          <- Solutions for the second week
+    │   ├── week3          <- Solutions for the third week
+    │   ├── week4          <- Solutions for the fourth week
+    │   ├── week5          <- Solutions for the fifth week
+    │   └── week6          <- Solutions for the sixth week
+    │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
