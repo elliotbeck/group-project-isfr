@@ -17,15 +17,15 @@ Final Project
 Topic: Do commodity prices grow faster than global inflation?
 
 Procedure:
-    1 Group discussion - time span & viable statistical methods selection  
-    2 Tasks Distribution and setting the collaboration environment 
-    3 Literature review (to be included in the report as well) 
-    4 Data Collection (Yahoo Finance/Bloomberg) and database creation with updated methods
-    5 Model Selection (f.i. Regression Analysis) 
-    6 Coding (Python/R Studio/Matlab) 
-    7 Use Docker to conserve the code 
-    8 Development of the interactive app
-    9 Report & Presentation (Latex) 
+    1. Group discussion - time span & viable statistical methods selection  
+    2. Tasks Distribution and setting the collaboration environment 
+    3. Literature review (to be included in the report as well) 
+    4. Data Collection (Yahoo Finance/Bloomberg) and database creation with updated methods
+    5. Model Selection (f.i. Regression Analysis) 
+    6. Coding (Python/R Studio/Matlab) 
+    7. Use Docker to conserve the code 
+    8. Development of the interactive app
+    9. Report & Presentation (Latex) 
 
 Project Organization
 ------------
