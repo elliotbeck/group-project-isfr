@@ -3,6 +3,14 @@ group-project-dtif
 
 Group project for the course: https://github.com/ipozdeev/it-skills-for-research
 
+We host the solutions to the homework assignments in the group project's folder homework.
+
+Team members:
+- Chongshuo Zhai
+- Ernest Digore
+- Wei Liu
+- Elliot Beck
+
 Project Organization
 ------------
 
