@@ -1,3 +1,4 @@
 homework/week5/data.feather filter=lfs diff=lfs merge=lfs -text
+data/raw/CPIAUCSL.ftr filter=lfs diff=lfs merge=lfs -text
 *.parquet filter=lfs diff=lfs merge=lfs -text
 *.hdf filter=lfs diff=lfs merge=lfs -text
