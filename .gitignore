@@ -58,3 +58,4 @@ tests/__pycache__/*
 homework/week3/data/
 homework/week5/data.hdf
 homework/week5/data.parquet
+.env
