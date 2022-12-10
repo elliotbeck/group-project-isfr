@@ -18,15 +18,20 @@ cmd_all <- df[df$period >= period & df$COMMODITY == "PALLFNF", "value"]
 
 
 # bind the data into data frame
-group <- data.frame(hicp, cmd_all, cmd_agr, cmd_food, cmd_gold, cmd_met,
+group <- data.frame(date = df[df$period >= period & 
+                      df$COMMODITY == "PALLFNF", "period"],
+                    hicp, cmd_all, cmd_agr, cmd_food, cmd_gold, cmd_met,
                     cmd_oil)
 
 # get growth rates and save
-group_r <- group[2:nrow(group), ] / group[1:(nrow(group) - 1), ] - 1
+group_r <- group[2:nrow(group), 2:ncol(group)] /
+  group[1:(nrow(group) - 1), 2:ncol(group)] - 1
+group_r$date <- group$date[2:nrow(group)]
 write_feather(group_r, "data/processed/commodities_growth.feather")
 
 # get cumulative growth rates and save
-group_c <- cumprod((group.r + 1))
+group_c <- cumprod((group_r[, 1:(ncol(group)-1)] + 1))
+group_c$date <- group$date[2:nrow(group)]
 write_feather(group_c, "data/processed/commodities_growth_cum.feather")
 
 # read in Chonghuo's data
