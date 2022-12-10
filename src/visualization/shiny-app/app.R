@@ -17,15 +17,17 @@ pce_data_growth_yoy <-
 
 # set up the ui
 ui <- dashboardPage(
-    dashboardHeader(),
+    dashboardHeader(title = "Commodities and Inflation",
+                    titleWidth = 250),
     dashboardSidebar(
     sidebarMenu(
+        menuItem("Returns", 
+                tabName = "returns", 
+                icon = icon("line-chart"))),
         menuItem("Correlations",
                 tabName = "correlations",
-                icon = icon("bar-chart")),
-        menuItem("Models", 
-                tabName = "models", 
-                icon = icon("line-chart")))
+                icon = icon("bar-chart"))
+
     ),
     dashboardBody(
     tabItems(
@@ -63,10 +65,11 @@ ui <- dashboardPage(
                     )
                 )
             ),
-        tabItem(tabName = "models",
+        tabItem(tabName = "returns",
                 fluidRow(
                 box(
-                    title = "Cumulative Growth of Commodities and US Inflation",
+                    title = "Cumulative Growth Rates of 
+                        Commodities and US Inflation",
                     status = "primary",
                     solidHeader = TRUE,
                     width = 12,
