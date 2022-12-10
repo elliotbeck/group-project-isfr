@@ -4,6 +4,6 @@ the shiny app in the command line:
 0) cd to group-project-isfr
 0) Create docker account and install docker desktop
 1) docker login
-2) docker build -t isfr-shiny -f ./src/visualization/Dockerfile .
+2) docker build -t isfr-shiny -f ./dashboard/Dockerfile .
 3) docker run --rm -p 3838:3838 isfr-shiny
 4) open http://localhost:3838 in browser

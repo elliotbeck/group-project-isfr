@@ -20,7 +20,7 @@ RUN R -e "remotes::install_version('feather', version = '0.3.5', dependencies= T
 RUN R -e "remotes::install_version('xts', version = '0.12.1', dependencies= T)"
 
 # copy the app directory into the image
-COPY ./src/visualization/* /srv/shiny-server/
+COPY ./dashboard/* /srv/shiny-server/
 COPY ./src/visualization/data/* /srv/shiny-server/
 COPY ./data/processed/* /srv/shiny-server/
 
