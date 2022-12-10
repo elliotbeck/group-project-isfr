@@ -1,8 +1,11 @@
 # import packages
 library(feather)
 
+# source the upstream script
+source("/src/data/upstream.R")
+
 # read in Ernest's data
-df <- as.data.frame(read_feather("data/raw/commodities.feather"))
+df <- as.data.frame(read_feather("/data/raw/commodities.feather"))
 
 # Regularization of dbnomics data
 df$period <- as.Date(df$period)
@@ -35,10 +38,10 @@ group_c$date <- group$date[2:nrow(group)]
 write_feather(group_c, "data/processed/commodities_growth_cum.feather")
 
 # read in Chonghuo's data
-crb <- read.csv("data/raw/crb.csv")
+crb <- read.csv("/data/raw/crb.csv")
 crb <- crb[order(nrow(data):1), ]
 sp500 <- as.data.frame(read_feather("data/raw/sp500.feather"))
-pce <- read.csv("data/raw/pce.csv")
+pce <- read.csv("/data/raw/pce.csv")
 pce <- pce[order(nrow(pce):1), ]
 
 # define the date sequence
@@ -69,7 +72,7 @@ write_feather(pce_data_growth, "data/processed/pce_data_growth.feather")
 pce_data_growth_yoy <- c(1:7)
 bn <- nrow(pce_data) - 12
 for (i in 1:bn){
-  xn <- 100 * (bind[i + 12, ] / bind[i, ] - 1)
+  xn <- 100 * (pce_data[i + 12, ] / pce_data[i, ] - 1)
   pce_data_growth_yoy <- rbind(pce_data_growth_yoy, xn)
 }
 pce_data_growth_yoy <- pce_data_growth_yoy[2:nrow(pce_data_growth_yoy), ]
