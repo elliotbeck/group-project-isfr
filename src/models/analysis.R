@@ -1,12 +1,15 @@
 # load libraries
+library(feather)
 
 # load data
 pce_data <- read_feather("data/processed/pce_data.feather")
-pce_data_growth <- write_feather("data/processed/pce_data_growth.feather")
+pce_data_growth <- read_feather("data/processed/pce_data_growth.feather")
 pce_data_growth_yoy <-
     read_feather("data/processed/pce_data_growth_yoy.feather")
 group_r <- read_feather("data/processed/commodities_growth.feather")
 group_c <- read_feather("data/processed/commodities_growth_cum.feather")
+group_c$date <- NULL
+group_r$date <- NULL
 
 # computations
 avg_prc <- colMeans(group_r) * 100
