@@ -23,7 +23,7 @@ correlations <- list(
 
 # save the correlation output
 save(correlations,
-    file = "src/visualization/correlations.RData")
+    file = "src/visualization/data/correlations.RData")
 
 # fit the models
 model_all <- summary(lm(hicp ~ cmd_all - 1, data = group_r))
@@ -40,10 +40,10 @@ results_model <- rbind(model_all$coefficients,
       model_met$coefficients,
       model_oil$coefficients)
 # save the model output
-save(results_model, file = "src/visualization/results_models_lm.RData")
+save(results_model, file = "src/visualization/data/results_models_lm.RData")
 
 # Rolling correlations HICP vs commodities
-a <- nrow(group_c)-floor(nrow(group.c) / 12) * 12
+a <- nrow(group_c)-floor(nrow(group_c) / 12) * 12
 b <- floor(nrow(group_c) / 12) - 1
 roll_2 = c(1:(b + 1))
 for(k in 1:7){
@@ -58,10 +58,10 @@ for(i in 0:b) {
   roll_2 <- rbind(roll_2, roll)
 }
 roll_2 <- roll_2[2:8, ]
-rownames(roll_2) <- colnames(group_r)
+rownames(roll_2) <- colnames(group_r)[1:7]
 roll_2 <- roll_2[2:7, ]
 time <- c(2004:2022)
 colnames(roll_2) <- time
 
 # save the rolling correlation output
-save(roll_2, file = "src/visualization/roll_correlations.RData")
+save(roll_2, file = "src/visualization/data/roll_correlations.RData")
