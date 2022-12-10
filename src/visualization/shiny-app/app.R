@@ -7,6 +7,14 @@ library(dygraphs)
 library(feather)
 library(xts)
 
+# load the data
+correlations <- get(load("correlations.RData"))
+results_models <- get(load("results_models_lm.RData"))
+roll_2 <- get(load("roll_correlations.RData"))
+group_c <- read_feather("commodities_growth_cum.feather")
+pce_data_growth_yoy <-
+    read_feather("pce_data_growth_yoy.feather")
+
 # set up the ui
 ui <- dashboardPage(
     dashboardHeader(),
@@ -86,13 +94,6 @@ ui <- dashboardPage(
 
 # set up the server
 server <- function(input, output) { 
-    # load the data
-    correlations <- get(load("src/visualization/correlations.RData"))
-    results_models <- get(load("src/visualization/results_models_lm.RData"))
-    roll_2 <- get(load("src/visualization/roll_correlations.RData"))
-    group_c <- read_feather("data/processed/commodities_growth_cum.feather")
-    pce_data_growth_yoy <-
-        read_feather("data/processed/pce_data_growth_yoy.feather")
 
     # set up the plots
     output$correlations <- DT::renderDataTable({
