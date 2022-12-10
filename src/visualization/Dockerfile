@@ -10,18 +10,14 @@ RUN apt-get update && apt-get install -y \
   
 
 # install R packages required 
-# Change the packages list to suit your needs
-RUN R -e 'install.packages(c(\
-              "shiny", \
-              "shinydashboard", \
-              "lattice", \
-              "DT", \
-              "dygraphs", \
-              "feather", \
-              "xts" \
-            ), \
-            repos="https://packagemanager.rstudio.com/cran/__linux__/focal/2021-04-23"\
-          )'
+# install packages with versions defined
+RUN R -e "install.packages('remotes')"
+RUN R -e "remotes::install_version('DT', version = '0.17', dependencies= T)"
+RUN R -e "remotes::install_version('shinydashboard', version = '0.7.1', dependencies= T)"
+RUN R -e "remotes::install_version('lattice', version = '0.20.41', dependencies= T)"
+RUN R -e "remotes::install_version('dygraphs', version = '1.1.1.6', dependencies= T)"
+RUN R -e "remotes::install_version('feather', version = '0.3.5', dependencies= T)"
+RUN R -e "remotes::install_version('xts', version = '0.12.1', dependencies= T)"
 
 # copy the app directory into the image
 COPY ./src/visualization/* /srv/shiny-server/
