@@ -21,12 +21,12 @@ ui <- dashboardPage(
                     titleWidth = 250),
     dashboardSidebar(
     sidebarMenu(
-        menuItem("Returns", 
-                tabName = "returns", 
-                icon = icon("line-chart"))),
+        menuItem("Returns",
+                tabName = "returns",
+                icon = icon("line-chart")),
         menuItem("Correlations",
                 tabName = "correlations",
-                icon = icon("bar-chart"))
+                icon = icon("bar-chart")))
 
     ),
     dashboardBody(
