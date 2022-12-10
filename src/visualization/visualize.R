@@ -4,9 +4,9 @@ library(lattice)
 library(viridisLite)
 
 # load data
-correlations <- get(load("src/visualization/correlations.RData"))
-roll_correlations <- get(load("src/visualization/roll_correlations.RData"))
-results_models_lm <- get(load("src/visualization/results_models_lm.RData"))
+correlations <- get(load("src/visualization/data/correlations.RData"))
+roll_correlations <- get(load("src/visualization/data/roll_correlations.RData"))
+results_models_lm <- get(load("src/visualization/data/results_models_lm.RData"))
 group_r <- read_feather("data/processed/commodities_growth.feather")
 group_c <- read_feather("data/processed/commodities_growth_cum.feather")
 pce_data_growth_yoy <-
