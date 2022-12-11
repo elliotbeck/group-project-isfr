@@ -1,0 +1,8 @@
+The following steps need to be done to start
+the visualization code in the command line:
+
+0) cd to group-project-isfr
+0) Create docker account and install docker desktop
+1) docker login
+2) docker build -t isfr-visualization -f ./src/visualization/Dockerfile .
+3) docker run -v $(PWD)/reports/figures:/reports/figures/ isfr-visualization

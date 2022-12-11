@@ -2,6 +2,7 @@
 library(gridExtra)
 library(lattice)
 library(viridisLite)
+library(feather)
 
 # load data
 correlations <- get(load("src/visualization/data/correlations.RData"))
@@ -19,6 +20,8 @@ grid.table(format(round(correlations[[5]], 3), nsmall = 3))
 # table of summary statistics HICP vs Commodities
 grid.table(format(round(results_models_lm, 3), nsmall = 3))
 
+# save of growths
+png("reports/figures/cumgrowth.png")
 # plot of growths
 cols <- hcl.colors(100, "Temps")
 kl <- seq(from = 1, to = 100, by = 20)
@@ -35,7 +38,11 @@ legend("topleft",
        col = cols[kl],
        bty = "n",
        pch=1:ncol(group_c[1:(ncol(group_c) - 1)]))
+dev.off() #only 129kb in size
 
+
+# save of growths
+png("reports/figures/cumgrowth12.png")
 # plot of 12 month growths
 date <- seq.Date(from = as.Date("1990-01-31"),
                 to = as.Date("2022-10-30"),
@@ -54,7 +61,10 @@ legend("topleft",
        cex = 1,bty = "n",
        col = c(cols[1], cols[70]),
        pch=1:ncol(pce_data[,1:2]))
+dev.off() #only 129kb in size
 
+# save of growths
+png("reports/figures/growth12.png")
 # plot of 12 month growths pce
 matplot(date[13:length(date)],
         pce_data_growth_yoy[,3:7],
@@ -78,7 +88,7 @@ legend("topleft",
                 cols[70],
                 cols[90]),
        pch = 1:ncol(pce_data[,3:7]))
-
+dev.off() #only 129kb in size
 
 # plots of the rolling correlations HICP vs Commodities
 time <- c(2004:2022)
@@ -95,11 +105,17 @@ for(i in 1:nrow(roll_correlations)){
 
 # heatmaps
 coul <- viridis(100)
+png("reports/figures/heatmapcmd.png")
 levelplot(correlations[[2]], col.regions = cm.colors(100),
         main = "Correlation Heatmap of monthly returns", xlab = "", ylab = "")
+dev.off() #only 129kb in size
+png("reports/figures/heatmappce.png")
 levelplot(correlations[[3]], col.regions = coul,
           main = "Correlation Heatmap of monthly returns",
           xlab = "", ylab = "")
+dev.off() #only 129kb in size
+png("reports/figures/heatmapsp500.png")
 levelplot(correlations[[4]], col.regions = cm.colors(100),
           main = "Correlation Heatmap of 12-monthly returns",
           xlab = "", ylab = "")
+dev.off() #only 129kb in size
