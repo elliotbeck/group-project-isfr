@@ -34,6 +34,7 @@ report and the Shiny App is done using the following four docker run commands:
    2. docker run -v $(PWD)/src/visualization/data:/src/visualization/data/ isfr-analysis
    3. docker run -v $(PWD)/reports/figures:/reports/figures/ isfr-visualization
    4. docker run --rm -p 3838:3838 isfr-shiny, open on: http://localhost:3838
+   
 Of course, before the docker run commands can be executed the docker builds have to be done as explained in the how-to files of the subdirectories. 
 
 Project Organization
