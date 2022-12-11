@@ -67,19 +67,25 @@ Project Organization
         ├── __init__.py    <- Makes src a Python module
         │
         ├── data           <- Scripts to download or generate data
-        │   └── make_dataset.py
+        │   |── Dockerfile
+        |   |—— docker-data-update-how-to.txt
+        |   |—— downstream.R
+        |   └── upstream.R
         │
-        ├── features       <- Scripts to turn raw data into features for modeling
-        │   └── build_features.py
-        │
-        ├── models         <- Scripts to train models and then use trained models to make
-        │   │                 predictions
-        │   ├── predict_model.py
-        │   └── train_model.py
+        ├── models         <- Scripts to make analysis on correlation between commodity and inflation
+        │   │                
+        │   ├── Dockerfile
+        │   |── analysis.R
+        |   |__ docker-analysis-how-to.txt
         │
         └── visualization  <- Scripts to create exploratory and results oriented visualizations
-            └── visualize.py
-    
+            |
+            |—— Data
+            |—— Dockerfile
+            |—— docker-visualization-how-to.txt
+            └── visualize.R
+            
+      
 
 
 
