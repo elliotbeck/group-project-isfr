@@ -27,6 +27,15 @@ Procedure:
    8. Development of the interactive app
    9. Report & Presentation (Latex) 
 
+Description:
+The Project is implemented using R and Docker. The update of the data, plots, 
+report and the Shiny App is done using the following four docker run commands:
+   1. docker run -v $(PWD)/data:/data isfr-data-update
+   2. docker run -v $(PWD)/src/visualization/data:/src/visualization/data/ isfr-analysis
+   3. docker run -v $(PWD)/reports/figures:/reports/figures/ isfr-visualization
+   4. docker run --rm -p 3838:3838 isfr-shiny, open on: http://localhost:3838
+Of course, before the docker run commands can be executed the docker builds have to be done as explained in the how-to files of the subdirectories. 
+
 Project Organization
 ------------
 
