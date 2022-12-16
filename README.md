@@ -41,8 +41,8 @@ Project Organization
     ├── README.md          <- README file to give an overview about the project.
     │
     ├── dashboard          <- Dokerized shiny app
-        ├── shiny-app      <- Shiny app 
-            |── app.R
+        ├── shiny-app      <- Shiny app 
+            |── app.R
         |—— docker-shiny-how-to.txt
         |—— Dockerfile
     │
