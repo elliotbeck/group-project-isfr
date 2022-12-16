@@ -15,34 +15,27 @@ Final Project
 ------------
 
 Topic: Do commodity prices grow faster than global inflation?
-
-Procedure:  
-   1. Group discussion - time span & viable statistical methods selection  
-   2. Tasks Distribution and setting the collaboration environment 
-   3. Literature review (to be included in the report as well) 
-   4. Data Collection (Yahoo Finance/Bloomberg) and database creation with updated methods
-   5. Model Selection (f.i. Regression Analysis) 
-   6. Coding (Python/R Studio/Matlab) 
-   7. Use Docker to conserve the code 
-   8. Development of the interactive app
-   9. Report & Presentation (Latex) 
-
+ 
 Description:
 The Project is implemented using R and Docker. The update of the data, plots, 
-report and the Shiny App is done using the following four docker run commands:
+report can be done running the following commands: 
    1. docker run -v $(PWD)/data:/data isfr-data-update
    2. docker run -v $(PWD)/src/visualization/data:/src/visualization/data/ isfr-analysis
    3. docker run -v $(PWD)/reports/figures:/reports/figures/ isfr-visualization
-   4. docker run --rm -p 3838:3838 isfr-shiny, open on: http://localhost:3838
+
+The Shiny App, which is implemented using a docker container can be accessed 
+by the following command:
+   1. docker run --rm -p 3838:3838 isfr-shiny, open on: http://localhost:3838
    
-Of course, before the docker run commands can be executed the docker builds have to be done as explained in the how-to files of the subdirectories. 
+Of course, before the docker run commands can be executed the docker builds have to be 
+done as explained in the how-to files stored in the subdirectories. 
 
 Project Organization
 ------------
 
     ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
+    ├── Makefile           <- Makefile with commands for python setup
+    ├── README.md          <- README file to give an overview about the project.
     │
     ├── dashboard          <- Dokerized shiny app
     │
@@ -75,24 +68,15 @@ Project Organization
         |   |—— docker-data-update-how-to.txt
         |   |—— downstream.R
         |   └── upstream.R
-        │
         ├── models         <- Scripts to make analysis on correlation between commodity and inflation
-        │   │                
         │   ├── Dockerfile
         │   |── analysis.R
         |   |__ docker-analysis-how-to.txt
-        │
         └── visualization  <- Scripts to create exploratory and results oriented visualizations
-            |
             |—— Data
             |—— Dockerfile
             |—— docker-visualization-how-to.txt
             └── visualize.R
             
-      
-
-
 
 --------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
