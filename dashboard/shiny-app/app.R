@@ -42,25 +42,28 @@ ui <- dashboardPage(
                 ),
                 fluidRow(
                 box(
-                    title = "Correlation Heatmap of monthly returns",
-                    status = "primary",
-                    solidHeader = TRUE,
-                    width = 6,
-                    plotOutput("rolling_comm")
-                ),
-                box(
-                    title = "Correlation Heatmap of monthly returns",
-                    status = "primary",
-                    solidHeader = TRUE,
-                    width = 6,
-                    plotOutput("rolling_comm_12")
-                ),
-                box(
-                    title = "Correlation Heatmap of 12-monthly returns",
+                    title = "Correlation heatmap of month-on-month returns of
+                                 SP500, CRB and inflation groups",
                     status = "primary",
                     solidHeader = TRUE,
                     width = 6,
                     plotOutput("rolling_sp500")
+                ),
+                box(
+                    title = "Correlation heatmap of year-on-year returns of
+                                 SP500, CRB and inflation groups",
+                    status = "primary",
+                    solidHeader = TRUE,
+                    width = 6,
+                    plotOutput("rolling_sp500_12")
+                ),
+                box(
+                    title = "Correlation heatmap of 12-monthly returns of
+                                 inflation and commodities",
+                    status = "primary",
+                    solidHeader = TRUE,
+                    width = 6,
+                    plotOutput("rolling_comm")
                         )
                     )
                 )
@@ -107,20 +110,16 @@ server <- function(input, output) {
     output$models <- renderPlot({
         heatmap(results_models, Rowv = NA, Colv = NA, scale = "none")
     })
-
-    output$rolling_comm <- renderPlot({
-        levelplot(correlations[[4]], col.regions = cm.colors(100),
-          main = "Correlation Heatmap of 12-monthly returns", 
-          xlab = "", ylab = "")
-    })
-    output$rolling_comm_12 <- renderPlot({
-        levelplot(correlations[[2]], col.regions = cm.colors(100),
-          main = "Correlation Heatmap of 12-monthly returns", 
-          xlab = "", ylab = "")
-    })
     output$rolling_sp500 <- renderPlot({
         levelplot(correlations[[3]], col.regions = cm.colors(100),
-          main = "Correlation Heatmap of 12-monthly returns", 
+          xlab = "", ylab = "")
+    })
+    output$rolling_sp500_12 <- renderPlot({
+        levelplot(correlations[[4]], col.regions = cm.colors(100),
+          xlab = "", ylab = "")
+    })
+    output$rolling_comm <- renderPlot({
+        levelplot(correlations[[2]], col.regions = cm.colors(100),
           xlab = "", ylab = "")
     })
     output$time_series <- renderDygraph({
