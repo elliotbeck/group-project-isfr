@@ -4,7 +4,7 @@ Do commodity prices grow faster than global inflation?
 Group project for the course: https://github.com/ipozdeev/it-skills-for-research
 
 We host the solutions to the homework assignments in the group project's folder
-homework in the midterm branch.
+homework in the midterm branch. The final project is hosted in the main branch. 
 
 Team members:
 - Chongshuo Zhai
