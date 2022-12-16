@@ -1,0 +1,27 @@
+Data dictionary:
+
+1) Dbnomics: https://db.nomics.world (online)
+
+ids = "IMF/PCPS/M.W00.PALLFNF.IX\'94 https://db.nomics.world/IMF/PCPS?q=IMF%2FPCPS%2FM.W00.PALLFNF.IX
+ids = "IMF/PCPS/M.W00.PAGRI.IX" https://db.nomics.world/IMF/PCPS?q=IMF%2FPCPS%2FM.W00.PAGRI.IX
+ids = "IMF/PCPS/M.W00.PALLMETA.IX" https://db.nomics.world/IMF/PCPS?q=IMF%2FPCPS%2FM.W00.PALLMETA.IX
+ids = "IMF/PCPS/M.W00.PFOOD.IX" https://db.nomics.world/IMF/PCPS?q=IMF%2FPCPS%2FM.W00.PFOOD.IX
+ids = "IMF/PCPS/M.W00.PGOLD.IX" https://db.nomics.world/IMF/PCPS?q=IMF%2FPCPS%2FM.W00.PGOLD.IX
+ids = "IMF/PCPS/M.W00.POILBRE.IX" https://db.nomics.world/IMF/PCPS?q=IMF%2FPCPS%2FM.W00.POILBRE.IX
+ids = "Eurostat/prc_hicp_midx/M.I05.CP00.EA" https://db.nomics.world/Eurostat/prc_hicp_midx?q=Eurostat%2Fprc_hicp_midx%2FM.I05.CP00.EA
+
+2) Yahoo Finance: https://finance.yahoo.com (online)
+
+https://finance.yahoo.com/quote/%5EGSPC/history?p=%5EGSPC
+
+3) Bloomberg Terminal (local)
+
+Tickers: 
+
+CRB CMDT Index                                                  
+PCE CYOY Index
+PCE DRBL Index                                                  
+PCE NDRB Index
+PCE SRV Index
+PCE CORE Index
+PCE CUR$ Index
