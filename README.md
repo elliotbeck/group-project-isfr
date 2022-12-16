@@ -1,9 +1,10 @@
-group-project-dtif
+Do commodity prices grow faster than global inflation?
 ==============================
 
 Group project for the course: https://github.com/ipozdeev/it-skills-for-research
 
-We host the solutions to the homework assignments in the group project's folder homework.
+We host the solutions to the homework assignments in the group project's folder
+homework in the midterm branch.
 
 Team members:
 - Chongshuo Zhai
@@ -11,12 +12,8 @@ Team members:
 - Wei Liu
 - Elliot Beck
 
-Final Project
+Project description
 ------------
-
-Topic: Do commodity prices grow faster than global inflation?
- 
-Description:
 We follow the datascience project structure as proposed by cookie-cutter. 
 The Project is implemented using R and Docker. We load data via APIs and therefor
 an automatic update of the data, plots, report and the Shiny App is possible. 
