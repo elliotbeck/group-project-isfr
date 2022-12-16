@@ -42,9 +42,9 @@ Project Organization
     │
     ├── dashboard          <- Dokerized shiny app
         ├── shiny-app      <- Shiny app 
-            |── app.R
+            └── app.R
         |—— docker-shiny-how-to.txt
-        |—— Dockerfile
+        └── Dockerfile
     │
     ├── data
     │   ├── processed      <- The final, canonical data sets for modeling.
