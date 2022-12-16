@@ -19,9 +19,9 @@ Topic: Do commodity prices grow faster than global inflation?
 Description:
 We follow the datascience project structure as proposed by cookie-cutter. 
 The Project is implemented using R and Docker. We load data via APIs and therefor
-an automatic update of the data, plots, report and shiny app is possible.
+an automatic update of the data, plots, report and the Shiny App is possible.
 
-The update of the data, plots, report can be done running the following commands: 
+The update of the data, plots and report can be done running the following commands: 
    1. docker run -v "$(PWD)/data:/data" isfr-data-update
    2. docker run -v "$(PWD)/src/visualization/data:/src/visualization/data/" isfr-analysis
    3. docker run -v "$(PWD)/reports/figures:/reports/figures/" isfr-visualization
