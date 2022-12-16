@@ -17,11 +17,14 @@ Final Project
 Topic: Do commodity prices grow faster than global inflation?
  
 Description:
-The Project is implemented using R and Docker. The update of the data, plots, 
-report can be done running the following commands: 
-   1. docker run -v $(PWD)/data:/data isfr-data-update
-   2. docker run -v $(PWD)/src/visualization/data:/src/visualization/data/ isfr-analysis
-   3. docker run -v $(PWD)/reports/figures:/reports/figures/ isfr-visualization
+We follow the datascience project structure as proposed by cookie-cutter. 
+The Project is implemented using R and Docker. We load data via APIs and therefor
+an automatic update of the data, plots, report and shiny app is possible.
+
+The update of the data, plots, report can be done running the following commands: 
+   1. docker run -v "$(PWD)/data:/data" isfr-data-update
+   2. docker run -v "$(PWD)/src/visualization/data:/src/visualization/data/" isfr-analysis
+   3. docker run -v "$(PWD)/reports/figures:/reports/figures/" isfr-visualization
 
 The Shiny App, which is implemented using a docker container can be accessed 
 by the following command:
@@ -38,6 +41,10 @@ Project Organization
     ├── README.md          <- README file to give an overview about the project.
     │
     ├── dashboard          <- Dokerized shiny app
+        ├── shiny-app      <- Shiny app 
+            |── app.R
+        |—— docker-shiny-how-to.txt
+        |—— Dockerfile
     │
     ├── data
     │   ├── processed      <- The final, canonical data sets for modeling.
