@@ -41,10 +41,10 @@ Project Organization
     ├── README.md          <- README file to give an overview about the project.
     │
     ├── dashboard          <- Dokerized shiny app
-        ├── shiny-app      <- Shiny app 
-            └── app.R
-        |—— docker-shiny-how-to.txt
-        └── Dockerfile
+    │   ├── shiny-app      <- Shiny app 
+    │   │   └── app.R
+    │   |—— docker-shiny-how-to.txt
+    │   └── Dockerfile
     │
     ├── data
     │   ├── processed      <- The final, canonical data sets for modeling.
@@ -68,7 +68,7 @@ Project Organization
     │       ├── presentation
     │       └── report
     │
-    ├── src                <- Source code for use in this project.
+    └── src                <- Source code for use in this project.
         │
         ├── data           <- Scripts to download or generate data
         │   |── Dockerfile
@@ -78,7 +78,7 @@ Project Organization
         ├── models         <- Scripts to make analysis on correlation between commodity and inflation
         │   ├── Dockerfile
         │   |── analysis.R
-        |   |__ docker-analysis-how-to.txt
+        |   └── docker-analysis-how-to.txt
         └── visualization  <- Scripts to create exploratory and results oriented visualizations
             |—— Data
             |—— Dockerfile
