@@ -43,7 +43,7 @@ Project Organization
     ├── dashboard          <- Dokerized shiny app
     │   ├── shiny-app      <- Shiny app 
     │   │   └── app.R
-    │   |—— docker-shiny-how-to.txt
+    │   ├── docker-shiny-how-to.txt
     │   └── Dockerfile
     │
     ├── data
@@ -71,18 +71,18 @@ Project Organization
     └── src                <- Source code for use in this project.
         │
         ├── data           <- Scripts to download or generate data
-        │   |── Dockerfile
-        |   |—— docker-data-update-how-to.txt
-        |   |—— downstream.R
-        |   └── upstream.R
+        │   ├── Dockerfile
+        │   ├── docker-data-update-how-to.txt
+        │   ├── downstream.R
+        │   └── upstream.R
         ├── models         <- Scripts to make analysis on correlation between commodity and inflation
         │   ├── Dockerfile
-        │   |── analysis.R
-        |   └── docker-analysis-how-to.txt
+        │   ├── analysis.R
+        │   └── docker-analysis-how-to.txt
         └── visualization  <- Scripts to create exploratory and results oriented visualizations
-            |—— Data
-            |—— Dockerfile
-            |—— docker-visualization-how-to.txt
+            │—— Data
+            │—— Dockerfile
+            │—— docker-visualization-how-to.txt
             └── visualize.R
             
 
