@@ -19,7 +19,8 @@ RUN R -e "remotes::install_version('feather', version = '0.3.5', dependencies= T
 # copy the app directory into the image
 RUN mkdir -p /src/data/
 COPY ./src/data/upstream.R /src/data/upstream.R 
-COPY ./src/data/downstream.R .
+COPY ./src/data/downstream.R /src/data/downstream.R 
+COPY ./src/data/updatedata.R .
 
 
 ## create directories
@@ -29,4 +30,4 @@ COPY ./data/raw/crb.csv /data/raw/crb.csv
 COPY ./data/raw/pce.csv /data/raw/pce.csv
 
 # Run the script
-CMD ["Rscript",  "downstream.R"]
+CMD ["Rscript",  "updatedata.R"]
