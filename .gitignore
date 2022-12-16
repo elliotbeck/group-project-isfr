@@ -43,6 +43,7 @@ nodeLanguageServer.*/**
 dist/**
 .RData
 .Rhistory
+.vscode
 
 # translation files
 *.xlf
