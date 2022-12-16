@@ -49,14 +49,6 @@ Project Organization
     │   ├── processed      <- The final, canonical data sets for modeling.
     │   └── raw            <- The original, immutable data dump.
     │
-    ├── homework
-    │   ├── week1          <- Solutions for the first week
-    │   ├── week2          <- Solutions for the second week
-    │   ├── week3          <- Solutions for the third week
-    │   ├── week4          <- Solutions for the fourth week
-    │   ├── week5          <- Solutions for the fifth week
-    │   └── week6          <- Solutions for the sixth week
-    │
     ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
